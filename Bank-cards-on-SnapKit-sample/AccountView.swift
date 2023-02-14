@@ -30,14 +30,19 @@ class AccountView: UIView {
     
     // MARK: - Private constants
     private enum UIConstants {
+        static let cornerRadius: CGFloat = 16
         static let cardWidth: CGFloat = 45
         static let cardHeight: CGFloat = 30
         static let contentInset: CGFloat = 16
+        static let currencySignImageSize: CGFloat = 25
+        static let xStackSpacing: CGFloat = 16
+        static let yStackSpacing: CGFloat = 8
     }
     
     // MARK: - Private properties
     private let currencyImageView: UIImageView = {
        let view = UIImageView()
+        view.backgroundColor = .clear
         return view
     }()
     
@@ -60,9 +65,11 @@ class AccountView: UIView {
 private extension AccountView {
     func initialize() {
         backgroundColor = UIColor(named: "BackgroundColor")
+        layer.cornerRadius = UIConstants.cornerRadius
         // Vertical stack configuration
         let yStack = UIStackView()
         yStack.axis = .vertical
+        yStack.spacing = UIConstants.yStackSpacing
         yStack.addArrangedSubview(amountLabel)
         yStack.addArrangedSubview(accountNameLabel)
         
@@ -72,11 +79,20 @@ private extension AccountView {
                                 forCellWithReuseIdentifier: String(describing: AccountViewCardCell.self))
         collectionView.dataSource = self
         collectionView.delegate = self
+        collectionView.backgroundColor = .clear
+        collectionView.snp.makeConstraints { make in
+            make.height.equalTo(UIConstants.cardHeight)
+        }
         yStack.addArrangedSubview(collectionView)
         
         // Horizontal stack configuration
         let xStack = UIStackView()
         xStack.axis = .horizontal
+        xStack.alignment = .top
+        xStack.spacing = UIConstants.xStackSpacing
+        currencyImageView.snp.makeConstraints { make in
+            make.size.equalTo(UIConstants.currencySignImageSize)
+        }
         xStack.addArrangedSubview(currencyImageView)
         xStack.addArrangedSubview(yStack)
         addSubview(xStack)

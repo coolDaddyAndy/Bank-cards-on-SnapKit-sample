@@ -20,12 +20,12 @@ class ViewController: UIViewController {
                                           CardThumbnailInfo(id: "", image: UIImage(named: "card")!),
                                           CardThumbnailInfo(id: "", image: UIImage(named: "card")!)
                                         ])
+        accountView.configure(with: info)
         view.backgroundColor = UIColor(named: "ViewsColor")
         view.addSubview(accountView)
         accountView.snp.makeConstraints { make in
             make.leading.trailing.equalToSuperview().inset(16)
             make.centerY.equalToSuperview()
-            make.height.equalTo(100)
         }
     }
 
