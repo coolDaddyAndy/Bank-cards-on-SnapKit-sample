@@ -13,6 +13,14 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let accountView = AccountView()
+        let info = AccountViewInfo(currency: .usd,
+                                   amount: 2342.25,
+                                   accountName: "My account",
+                                   cards: [CardThumbnailInfo(id: "", image: UIImage(named: "card")!),
+                                          CardThumbnailInfo(id: "", image: UIImage(named: "card")!),
+                                          CardThumbnailInfo(id: "", image: UIImage(named: "card")!)
+                                        ])
+        view.backgroundColor = UIColor(named: "ViewsColor")
         view.addSubview(accountView)
         accountView.snp.makeConstraints { make in
             make.leading.trailing.equalToSuperview().inset(16)

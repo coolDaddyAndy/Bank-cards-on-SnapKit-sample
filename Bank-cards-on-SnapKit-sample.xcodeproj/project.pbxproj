@@ -15,6 +15,8 @@
 		FD2CBC41299B860A0081DF5F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD2CBC40299B860A0081DF5F /* Assets.xcassets */; };
 		FD2CBC44299B860A0081DF5F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD2CBC42299B860A0081DF5F /* LaunchScreen.storyboard */; };
 		FDC00157299B908D00F9DAD6 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC00156299B908D00F9DAD6 /* AccountView.swift */; };
+		FDC0015C299B9DA200F9DAD6 /* AccountViewInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC0015B299B9DA200F9DAD6 /* AccountViewInfo.swift */; };
+		FDC0015E299BA43300F9DAD6 /* AccountViewCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC0015D299BA43300F9DAD6 /* AccountViewCardCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		FD2CBC43299B860A0081DF5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FD2CBC45299B860A0081DF5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FDC00156299B908D00F9DAD6 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
+		FDC0015B299B9DA200F9DAD6 /* AccountViewInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewInfo.swift; sourceTree = "<group>"; };
+		FDC0015D299BA43300F9DAD6 /* AccountViewCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewCardCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +94,8 @@
 				FD2CBC42299B860A0081DF5F /* LaunchScreen.storyboard */,
 				FD2CBC45299B860A0081DF5F /* Info.plist */,
 				FDC00156299B908D00F9DAD6 /* AccountView.swift */,
+				FDC0015B299B9DA200F9DAD6 /* AccountViewInfo.swift */,
+				FDC0015D299BA43300F9DAD6 /* AccountViewCardCell.swift */,
 			);
 			path = "Bank-cards-on-SnapKit-sample";
 			sourceTree = "<group>";
@@ -213,6 +219,8 @@
 				FD2CBC3C299B86070081DF5F /* ViewController.swift in Sources */,
 				FD2CBC38299B86070081DF5F /* AppDelegate.swift in Sources */,
 				FD2CBC3A299B86070081DF5F /* SceneDelegate.swift in Sources */,
+				FDC0015E299BA43300F9DAD6 /* AccountViewCardCell.swift in Sources */,
+				FDC0015C299B9DA200F9DAD6 /* AccountViewInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
